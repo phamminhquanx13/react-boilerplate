@@ -7,33 +7,28 @@ class EditTask extends Component {
             editItem: this.props.editItem
         }
     }
-    handleEditTask = () => {
+    handleEditTask = () =>{
         this.props.doEdit(this.state.editItem.id, this.state.editItem.name)
         this.props.closeForm()
     }
-    changedName = (e) => {
+    changedName = (e) =>{
         this.setState({
-            editItem: { id: this.props.editItem.id, name: e.target.value }
+            editItem : { id: this.props.editItem.id, name : e.target.value}
         })
     }
-    render() {
-        return (
-            <React.Fragment>
-                <div className="container">
-                    <h2>DS</h2>
+    render(){
+         <React.Fragment>
+             <div className="container">
+                <h2>Task</h2>
                     <div className="form-group">
                         <label>Name</label>
-                        <input type="text"
-                            className="form-control"
-                            placeholder="Enter name of task"
-                            defaultValue={this.state.editItem.name}
-                            onChange={this.changedName} />
+                        <input type="text" className="form-control" placeholder ="moi ban nhap task"
+                         defaultValue ={this.state.editItem.name} onChange={ this.changedName}/>
                     </div>
-                    <button type="submit" style={{ marginRight: 5 + 'px' }} className="btn btn-default" onClick={this.handleEditTask}>Edit</button>
+                    <button type="submit" style={{marginRight : 12+'px'}} className ="btn btn-default" onClick={this.handleEditTask}>Edit</button>
                     <button type="button" className="btn btn-default" onClick={this.props.closeForm}>Back</button>
-                </div>
-            </React.Fragment>
-        );
+             </div>
+         </React.Fragment>
     }
 }
 

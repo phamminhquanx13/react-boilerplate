@@ -12,37 +12,42 @@ class AddTask extends Component {
     linkList = () => {
         this.props.closeForm()
     }
-    handleAddTask = () => {
+    handleAddTask = () =>{
         this.props.addTask(this.state.name)
-        this.linkList()
     }
-
-    isChangedName = (e) => {
+    isChangedName = (e) =>{
         this.setState({
-            name: e.target.value
+            name : e.target.value
         })
     }
     render() {
-        if (this.state.showTaskList == true) {
-            return ( <
-                TaskList / >
+        if (this.state.
+            showTaskList == true) {
+            return ( <TaskList />
             )
         } else {
             return (<React.Fragment>
                 <div className = "container">
-                <h2> Install </h2> <div className = "form-group" >
+                <h2> Install </h2> 
+                <div className = "form-group" >
                 <label> Name </label>
                 <input type = "text"
                 className = "form-control"
-                placeholder = "Enter name of task"
-                onChange = { this.isChangedName }/> </div> <button type = "submit"
+                placeholder 
+                = "Enter name of task"
+                onChange = 
+                { this.isChangedName }/> 
+                </div> <button type = "submit"
                 style = {
                     { marginRight: 5 + 'px' }
                 }
                 className = "btn btn-default"
-                onClick = { this.handleAddTask } > Add </button>yellow <button type = "button"
-                className = "btn btn-default"
-                onClick = { this.linkList } > Back </button> </ div > 
+                onClick = 
+                { this.handleAddTask } > Add </button>yellow <button type = "button"
+                className =
+                 "btn btn-default"
+                onClick = 
+                { this.linkList } > Back </button> </ div > 
                 </React.Fragment>
             );
         }

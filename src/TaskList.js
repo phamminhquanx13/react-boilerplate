@@ -52,18 +52,21 @@ class TaskList extends Component {
     render() {
         if (this.state.showAddForm === true) {
             return (
-                <AddTask addTask={this.addTask} closeForm={this.closeForm} />
+                <AddTask addTask={this.addTask}
+                 closeForm={this.closeForm} />
             )
         } else if (this.state.showEditForm === true) {
             return (
-                <EditTask doEdit={this.doEdit} closeForm={this.closeForm} editItem={this.state.editTask} />
+                <EditTask doEdit={this.doEdit} 
+                closeForm={this.closeForm} editItem={this.state.editTask} />
             )
         } else {
             return (
                 <div className="container">
                     <br />
                     <br />
-                    <button type="button" className="btn btn-outline-primary" onClick={this.setStatus} >Add</button>
+                    <button type="button" className="btn btn-outline-primary"
+                     onClick={this.setStatus} >Add</button>
                     <h2>Ds</h2>
                     <table className="table table-striped">
                         <thead>
